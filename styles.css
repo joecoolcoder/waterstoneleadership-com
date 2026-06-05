@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --ink: #2e3f4c;
+  --body: #565656;
+  --blue: #40649c;
+  --accent-blue: #3f6196;
+  --pale: #eef2fb;
+  --line: #dde4ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--body);
+  font-family: "Gudea", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.site-header {
+  position: relative;
+  padding: 6px 24px 35px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.brand img {
+  width: min(560px, 68vw);
+  height: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 38px;
+  margin-top: 54px;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0 0 14px;
+  border-bottom: 2px solid transparent;
+  color: #222;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.wrap {
+  width: min(1110px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.narrow {
+  width: min(900px, calc(100% - 48px));
+}
+
+.home {
+  min-height: calc(100vh - 128px);
+  text-align: center;
+}
+
+.home-mark {
+  width: min(466px, 72vw);
+  margin: 0 auto 32px;
+  display: block;
+}
+
+.tagline,
+.site-footer {
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.page-title,
+.section-title {
+  color: var(--accent-blue);
+  font-family: "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin: 0 0 24px;
+  font-size: 16px;
+}
+
+.verse {
+  margin: 0 auto;
+  max-width: 520px;
+  color: var(--body);
+}
+
+.verse em {
+  display: block;
+  font-size: 14px;
+}
+
+.page-title {
+  margin: 18px 0 24px;
+  font-size: 17px;
+}
+
+.section-title {
+  font-size: 17px;
+}
+
+.spacious {
+  padding-top: 12vh;
+}
+
+.approach-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 400px);
+  gap: 58px;
+  align-items: start;
+  margin: 20px 0 28px;
+}
+
+.approach-intro img {
+  width: 100%;
+  display: block;
+}
+
+.content p {
+  margin: 0 0 14px;
+}
+
+.content ul {
+  margin: 14px 0 18px 22px;
+}
+
+.content li {
+  margin: 4px 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin: 18px 0 24px;
+}
+
+.wrap.split {
+  margin: 18px auto 24px;
+}
+
+.split.reverse .copy {
+  order: -1;
+}
+
+.split img,
+.image-panel img {
+  width: 100%;
+  display: block;
+}
+
+h2,
+h3 {
+  margin: 0 0 16px;
+  color: #242424;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 48px;
+  margin: 22px 0 28px;
+}
+
+.overview article {
+  grid-column: span 2;
+  min-height: 320px;
+  padding: 64px 48px 46px;
+  background: var(--pale);
+  color: #606060;
+  text-align: center;
+}
+
+.overview article:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.overview article:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.overview h3 {
+  margin-bottom: 18px;
+  color: #242424;
+  font-size: 21px;
+}
+
+.overview p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.definition-band {
+  margin: 24px 0;
+  padding: 27px 24px;
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.definition-band p {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.definition-band p:last-child {
+  margin-bottom: 0;
+}
+
+.coach-quote {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  gap: 58px;
+  align-items: center;
+  margin: 24px auto 28px;
+}
+
+.coach-quote img {
+  width: 100%;
+  display: block;
+}
+
+.coach-quote blockquote {
+  margin: 0;
+  color: #606060;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.image-panel {
+  margin: 18px auto 24px;
+  width: min(400px, 100%);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 48px 58px;
+  margin: 18px 0 24px;
+}
+
+.card {
+  grid-column: span 2;
+  min-height: 142px;
+  padding: 38px 44px;
+  background: var(--pale);
+  text-align: center;
+}
+
+.card.wide {
+  grid-column: auto;
+  width: auto;
+}
+
+.card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.blue-band {
+  margin: 22px 0;
+  padding: 27px 24px;
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.blue-band blockquote {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.clients-quote .wrap {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1fr);
+  gap: 68px;
+  align-items: center;
+}
+
+.clients-quote img {
+  width: 100%;
+  display: block;
+}
+
+.clients-quote blockquote {
+  max-width: none;
+}
+
+.testimonial-section {
+  margin: 22px auto 24px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin: 16px 0 20px;
+}
+
+.testimonials p {
+  min-height: 170px;
+  padding: 34px 40px;
+  background: var(--pale);
+  text-align: center;
+}
+
+.testimonials a {
+  display: block;
+  margin-top: 18px;
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.button {
+  display: inline-block;
+  margin: 8px 0 18px;
+  padding: 16px 28px;
+  border: 1px solid var(--accent-blue);
+  background: transparent;
+  color: var(--accent-blue);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.considerations {
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 54px;
+  align-items: start;
+  margin: 18px 0;
+}
+
+.charity-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 400px);
+  gap: 72px;
+  align-items: start;
+  margin: 22px auto 24px;
+}
+
+.charity-intro img {
+  width: 100%;
+  display: block;
+}
+
+.charity-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  margin: 0 auto 24px;
+}
+
+.charity-feature-copy {
+  padding: 62px 50px 48px;
+  background: var(--pale);
+}
+
+.charity-feature .page-title {
+  margin: 0 0 20px;
+}
+
+.charity-feature-copy p {
+  color: var(--body);
+}
+
+.charity-feature img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.charity-considerations {
+  margin: 0 auto 22px;
+  color: var(--body);
+  text-align: center;
+}
+
+.charity-considerations h2 {
+  margin-bottom: 18px;
+}
+
+.charity-considerations p {
+  margin-bottom: 4px;
+}
+
+.charity-considerations p:last-child {
+  margin-top: 20px;
+}
+
+.charity-scripture {
+  margin: 0;
+  padding: 27px 0;
+  background: var(--blue);
+  color: #fff;
+}
+
+.charity-scripture .wrap {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.charity-scripture img {
+  width: 100%;
+  display: block;
+}
+
+.charity-scripture p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.55;
+}
+
+.resources-page {
+  margin-top: 24px;
+}
+
+.resource-section {
+  margin: 0 0 24px;
+}
+
+.resource-section .page-title,
+.resource-section .section-title {
+  margin: 0 0 18px;
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.resource-list a {
+  display: block;
+  min-height: 74px;
+  padding: 22px 24px;
+  background: var(--pale);
+  color: #545454;
+  text-align: center;
+  text-decoration: none;
+}
+
+.resource-list a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.linkedin-band {
+  margin: 24px 0 0;
+  padding: 27px 24px;
+  background: var(--blue);
+  color: #fff;
+}
+
+.linkedin-band .wrap {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 42px;
+  align-items: center;
+  width: min(760px, calc(100% - 48px));
+}
+
+.linkedin-mark {
+  width: 112px;
+  height: 112px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.linkedin-band h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.linkedin-band p {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+.linkedin-band a {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 14px 22px;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+.linkedin-band a:hover {
+  background: var(--pale);
+  color: var(--accent-blue);
+}
+
+.site-footer {
+  padding: 56px 24px 42px;
+  text-align: center;
+  font-family: Didot, "Bodoni 72", "Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: #242424;
+  text-transform: lowercase;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding: 12px 18px 21px;
+  }
+
+  .brand img {
+    width: min(320px, 74vw);
+  }
+
+  .site-nav {
+    gap: 14px 24px;
+    margin-top: 28px;
+  }
+
+  .site-nav a {
+    padding-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+  }
+
+  .home-mark {
+    margin-top: 12px;
+    margin-bottom: 44px;
+  }
+
+  .spacious {
+    padding-top: 8vh;
+  }
+
+  .approach-intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 16px 0 22px;
+  }
+
+  .charity-intro,
+  .charity-feature,
+  .clients-quote .wrap,
+  .coach-quote,
+  .charity-scripture .wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .definition-band {
+    padding: 27px 18px;
+  }
+
+  .definition-band p,
+  .coach-quote blockquote {
+    font-size: 18px;
+  }
+
+  .charity-intro {
+    margin-top: 18px;
+  }
+
+  .charity-feature-copy {
+    padding: 42px 28px 28px;
+  }
+
+  .resource-list {
+    grid-template-columns: 1fr;
+  }
+
+  .linkedin-band .wrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .split,
+  .overview,
+  .cards,
+  .considerations {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .overview article,
+  .overview article:nth-child(4),
+  .overview article:nth-child(5),
+  .card,
+  .card:nth-child(4),
+  .card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .split,
+  .split.reverse {
+    margin: 18px 0 24px;
+  }
+
+  .wrap.split,
+  .wrap.split.reverse {
+    margin: 18px auto 24px;
+  }
+
+  .split.reverse .copy {
+    order: initial;
+  }
+
+  .card.wide {
+    grid-column: auto;
+  }
+}
