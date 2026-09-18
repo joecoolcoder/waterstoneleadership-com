@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Water Stone Leadership</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/wsl-header.png" alt="Water Stone Leadership"></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="our-approach.html">Our Approach</a>
+      <a href="our-clients.html">Our Clients</a>
+      <a href="designated-charity.html">Designated Charity</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main class="content wrap contact-page">
+    <form class="contact-form" action="https://formspree.io/f/mbgljebg" method="POST">
+      <h1 class="page-title">Contact Joe Ratterman</h1>
+      <p class="contact-helper">I look forward to connecting soon. Please make sure to provide either an email address and/or a phone number so I can get back to you.</p>
+
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="contact-methods">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required></textarea>
+      </div>
+
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="gotcha">Leave this field empty</label>
+        <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button class="form-submit" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">elevate · sharpen · encourage</footer>
+
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    const email = document.querySelector('#email');
+    const phone = document.querySelector('#phone');
+
+    function validateContactMethod() {
+      email.setCustomValidity(!email.value.trim() && !phone.value.trim()
+        ? 'Please provide either an email address or a phone number.'
+        : '');
+    }
+
+    email.addEventListener('input', validateContactMethod);
+    phone.addEventListener('input', validateContactMethod);
+    contactForm.addEventListener('submit', validateContactMethod);
+    validateContactMethod();
+  </script>
+</body>
+</html>
