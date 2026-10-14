@@ -628,6 +628,7 @@ h3 {
 }
 
 .form-submit {
+  margin: 18px 0;
   cursor: pointer;
 }
 
