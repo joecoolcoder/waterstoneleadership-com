@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Water Stone Leadership</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="contact-form.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -20,7 +22,7 @@
   </header>
 
   <main class="content wrap contact-page">
-    <form class="contact-form" action="https://formspree.io/f/mbgljebg" method="POST">
+    <form class="contact-form" action="https://my-contact-form.josephpratterman.workers.dev/contact" method="POST" data-contact-site="waterstoneleadership" data-contact-endpoint="https://my-contact-form.josephpratterman.workers.dev/contact">
       <h1 class="page-title">Contact Joe Ratterman</h1>
       <p class="contact-helper">I look forward to connecting soon. Please make sure to provide either an email address and/or a phone number so I can get back to you.</p>
 
@@ -51,6 +53,7 @@
         <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
       </div>
 
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAFWv_HzwFF4UEAsW"></div>
       <button class="connection-button form-submit" type="submit">Send Message</button>
     </form>
   </main>
